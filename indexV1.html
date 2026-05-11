@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html><!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Ali - تصميم المواقع الإلكترونية</title>
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #1557b0;
+            --gold: #f9a825;
+            --bg: #f8fafc;
+            --white: #ffffff;
+            --text: #1f1f1f;
+            --muted: #5f6368;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+            --shadow: 0 8px 30px rgba(0,0,0,0.08);
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            direction: rtl;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 40%, #1a73e8 100%);
+            color: #fff;
+            text-align: center;
+            padding: 70px 20px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+            top: -60px;
+            left: -60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
+            bottom: -40px;
+            right: -40px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .wave {
+            font-size: 44px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero .name {
+            color: var(--gold);
+            font-weight: 900;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.92;
+            margin-bottom: 35px;
+            line-height: 1.8;
+        }
+
+        .btn-more {
+            display: inline-block;
+            background: var(--gold);
+            color: #1f1f1f;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(249,168,37,0.35);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-more:hover {
+            background: #fbc02d;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(249,168,37,0.45);
+        }
+
+        /* ========== SECTIONS ========== */
+        .section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .section h2 {
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 14px;
+            color: var(--primary-dark);
+        }
+
+        .section .subhead {
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 35px;
+            font-size: 16px;
+        }
+
+        /* ========== BENEFIT CARDS ========== */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 30px 22px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card .icon {
+            font-size: 42px;
+            margin-bottom: 14px;
+        }
+
+        .card h3 {
+            font-size: 19px;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* ========== DEMO BUTTONS ========== */
+        .demo-area {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            margin: 30px 0;
+        }
+
+        .demo-area .label {
+            color: var(--muted);
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+
+        .btn-fb {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #1877f2;
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(24,119,242,0.3);
+        }
+
+        .btn-fb:hover {
+            background: #166fe5;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(24,119,242,0.4);
+        }
+
+        /* ========== PROCESS ========== */
+        .process {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px 24px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+
+        .process ol {
+            padding-right: 20px;
+            color: var(--text);
+            font-size: 16px;
+        }
+
+        .process li {
+            margin-bottom: 14px;
+            line-height: 1.7;
+        }
+
+        .process li strong {
+            color: var(--primary-dark);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            text-align: center;
+            padding: 30px 20px 50px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer .cta {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: var(--primary-dark);
+        }
+
+        .footer .btn-fb {
+            margin-bottom: 20px;
+        }
+
+        .footer .note {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 500px) {
+            .hero h1 {
+                font-size: 26px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .section h2 {
+                font-size: 23px;
+            }
+        }
+
+        /* smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ====== HERO ====== -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <span class="wave">👋</span>
+            <h1>مرحباً بكم<br>أنا <span class="name">Mohamed Ali</span></h1>
+            <p>
+                متخصص في إنشاء وتصميم المواقع الإلكترونية الحديثة.<br>
+                أساعد الأفراد وأصحاب المشاريع على بناء مواقع احترافية<br>
+                سريعة، جذابة، ومتوافقة مع جميع الأجهزة.
+            </p>
+            <p style="font-weight: 600; margin-bottom: 30px;">
+                إذا كنت تريد موقعاً يعرض مشروعك بشكل مميز،<br>فأنت في المكان الصحيح.
+            </p>
+            <a href="#details" class="btn-more">تفاصيل أكثر</a>
+        </div>
+    </header>
+
+    <!-- ====== تفاصيل أكثر ====== -->
+    <main id="details">
+
+        <!-- لماذا تحتاج موقعاً -->
+        <section class="section">
+            <h2>📌 لماذا تحتاج موقعاً إلكترونياً؟</h2>
+            <p class="subhead">سواء كنت تبيع منتجاً، تقدم خدمة، أو تشحن ألعاباً إلكترونية… موقعك هو واجهتك للعالم.</p>
+            <div class="cards">
+                <div class="card">
+                    <div class="icon">🛒</div>
+                    <h3>متجر إلكتروني</h3>
+                    <p>اعرض كل منتجاتك، عروضك، وأسعارك في صفحة واحدة منظمة يرتاح لها الزبون.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🎮</div>
+                    <h3>شحن ألعاب</h3>
+                    <p>قدّم طرق الشحن وباقاتك بوضوح، واجعل طلب الخدمة بنقرة زر واحدة.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📞</div>
+                    <h3>خدمات وأعمال حرة</h3>
+                    <p>موقعك = بطاقة أعمالك. يعرض أعمالك السابقة، تقييمات العملاء، وطرق التواصل معك.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📱</div>
+                    <h3>متوافق مع الجوال</h3>
+                    <p>كل عملائي يدخلون من هواتفهم. موقعك سيبدو رائعاً على أي شاشة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- فكرة الأزرار -->
+        <section class="section">
+            <h2>🔘 فكرة الأزرار التفاعلية</h2>
+            <p class="subhead">تخيل أن زائر موقعك يضغط على زر واحد فيوصله إليك فوراً. هذا ممكن، وهذا مثال حي:</p>
+            <div class="demo-area">
+                <p class="label">👇 هذا الزر ينقلك مباشرة إلى صفحتي على فيسبوك</p>
+                <a href="https://www.facebook.com/MOHAMED.ALE.STORE" target="_blank" class="btn-fb">
+                    <span>📘</span> زر التواصل عبر فيسبوك
+                </a>
+                <p style="margin-top: 16px; color: var(--muted); font-size: 14px;">
+                    بمجرد أن يضغط الزائر، يُحوَّل فوراً إلى صفحتك. سهل، سريع، واحترافي.
+                </p>
+            </div>
+        </section>
+
+        <!-- كيف أشتغل؟ -->
+        <section class="section">
+            <h2>🛠️ كيف أعمل؟</h2>
+            <div class="process">
+                <ol>
+                    <li><strong>ترسل لي وصفاً:</strong> تصف لي شكل الموقع الذي تريده، الألوان، الخدمات، والروابط التي تريد تضمينها.</li>
+                    <li><strong>أبني لك الموقع:</strong> أستخدم أحدث الأدوات لبناء موقع سريع وجذاب.</li>
+                    <li><strong>تستلم رابطاً:</strong> تحصل على رابط خاص بك، يمكن لأي شخص فتحه من أي مكان.</li>
+                    <li><strong>تعديلات مستقبلية:</strong> لو احتجت تحديث أي شيء لاحقاً (أسعار، صور، إضافات)، أقدم لك خدمة التحديث.</li>
+                </ol>
+            </div>
+            <p style="text-align: center; color: var(--muted); margin-top: 20px;">
+                كل ما عليك هو أن ترسل لي وصفاً، وأتولى الباقي.
+            </p>
+        </section>
+
+        <!-- التحديثات المستقبلية -->
+        <section class="section">
+            <h2>🔄 ميزة التحديثات المستقبلية</h2>
+            <p class="subhead">موقعك ليس شيئاً جامداً. يمكنني تحديثه متى أردت:</p>
+            <div class="cards">
+                <div class="card">
+                    <div class="icon">➕</div>
+                    <h3>إضافة منتجات</h3>
+                    <p>تضيف منتجاً جديداً؟ أضيفه لك في الموقع.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">✏️</div>
+                    <h3>تغيير الأسعار</h3>
+                    <p>عدّل أسعارك، وسأعكسها فوراً على موقعك.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🖼️</div>
+                    <h3>تحديث الصور</h3>
+                    <p>صور جديدة، عروض جديدة، كل شيء يبقى حديثاً.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <p class="cta">📩 مستعد تبدأ؟ تواصل معي الآن</p>
+        <a href="https://www.facebook.com/MOHAMED.ALE.STORE" target="_blank" class="btn-fb">
+            <span>📘</span> تواصل معي على فيسبوك
+        </a>
+        <p class="note">© 2025 Mohamed Ali · جميع الحقوق محفوظة</p>
+    </footer>
+
+</body>
+</html>
